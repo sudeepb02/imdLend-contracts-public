@@ -1,0 +1,15 @@
+# Mirrors the IMD protocol's packages/contracts settings.
+#
+# `bytecode_hash = "none"` keeps creation code identical across machines and directories. The market
+# is deployed through the CREATE2 deployer on every launch chain, and its address, and every vault
+# address it produces, depends on that creation code.
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+via_ir = false
